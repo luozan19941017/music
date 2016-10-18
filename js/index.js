@@ -48,17 +48,14 @@ $(function(){
         $('.content-geshou').text(datebase[index].geshou)
         audio.src=datebase[index].src;
         $('.bofang').addClass("zanting");
-
         audio.play()
         $('.music-list .gequ').each(function(i){
             $('.music-list .gequ').eq(i).css({
                 background:'',
-
             })
         })
         $('.music-list .gequ').eq(index).css({
             background:'#000',
-
         })
     })
     //点击上一首
@@ -81,18 +78,13 @@ $(function(){
         $('.music-list .gequ').each(function(i){
             $('.music-list .gequ').eq(i).css({
                 background:'',
-
             })
         })
         $('.music-list .gequ').eq(index).css({
             background:'000',
-
         })
     })
     var audio=$('audio').get(0);
-
-
-
     $('.bofang').on('click',function(){
         $('.bofang').toggleClass("zanting");
         if(audio.paused){
@@ -145,9 +137,7 @@ $(function(){
     $('.jindutiao').on('click',function(e){
         audio.currentTime=audio.duration*(e.offsetX-$(this).find('.yuan').width()/2)/$('.jindutiao').width();
         audio.play();
-
     })
-
         //拖动进度条
     $('.jindu .yuan').on('mousedown',function(){
         $(document).on('mousemove',function(e){
@@ -160,7 +150,6 @@ $(function(){
             $(document).off('mousemove')
             $(document).off('mouseup')
         })
-
     })
     var arr=[];
     //设置默认音量为1
@@ -200,12 +189,10 @@ $(function(){
         $('.yinliang-box .yuan').css({
             left:audio.volume*$('.yinliang-jindu').width()-($('.yinliang-box .yuan').width()/2)
       })
-
         $('.yinliang-jindu .yl-mask').css({
             width:audio.volume*$('.yinliang-jindu').width()
         })
     })
-
     //音量拖动
     $('.yinliang-box .yuan').on('mousedown',function(e){
         $(document).on('mousemove',function(e){
@@ -231,21 +218,21 @@ $(function(){
     $('.music-list').on('mouseleave','.gequ',function(){
         $(this).find('.m-box').css({display:'none'})
         $(this).removeClass('active')
-
     })
-    //歌词详情页
-    $('.music-box .img').on('click',function(){
-        $('.music-box .gece').toggleClass('active')
-        $('.gece img').attr('src',datebase[index].tupian)
-    })
+    $('.music-list li').on('click',function(){
 
+        // console.log(
+        //     // audio.src=datebase[$(this).index()].src
+        // )
+    })
     //删除按钮
     $('.shanchu').on('click',function(){
+
         $(this).closest('.gequ').remove()
     })
-
-    $('.list').on('click',function(){
+    $('.liebiao').on('click',function(){
         $('.music-list').toggleClass('active')
     })
+
 
 })

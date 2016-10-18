@@ -9,16 +9,32 @@ body{
   //background-position:50px 0;
   background-size:cover;
 }
+@font-face{
+  font-family:'blod';
+  src:url( fonts / myriad-set-pro_bold.woff)
+}
+@font-face{
+  font-family:'thin';
+  src:url( fonts / myriad-set-pro_extrathin.woff)
+}
+@font-face{
+  font-family:'semibold';
+  src:url( fonts / myriad-set-pro_semibold.wof)
+}
+@font-face{
+  font-family:'text';
+  src:url( fonts / myriad-set-pro_text.woff)
+}
 .box{
   width:680px;
-  height:600px;
+  height:665px;
   margin:0 auto;
   //background-size:cover;
-  background:rgba(0,0,0,0.9);
+  background:rgba(43,135,198,.5);
   .top{
     width:100%;
     height:40px;
-    background:rgba(0,0,0,0.7);
+    //background:rgba(0,0,0,0.7);
     color:#fff;
     .left{
       width:87%;
@@ -43,13 +59,17 @@ body{
       }
     }
     .list{
+      float:left;
       width:6%;
       height:100%;
-      background:blue;
-      float:left;
-      background:url(img/logo.png);
-      background-position:-177px -15px;
-      margin-right:5px;
+      .liebiao{
+        width:100%;
+        height:100%;
+        background:url(img/logo.png);
+        background-position:-177px -15px;
+        margin-right:5px;
+        cursor:pointer;
+      }
       .music-list{
         width:240px;
         //height:500px;
@@ -127,6 +147,8 @@ body{
       background:url(img/logo.png);
       background-position:257px 125px;
       float:right;
+      cursor:pointer;
+
     }
   }
   .content{
@@ -146,6 +168,16 @@ body{
       top:50px;
       margin:auto;
       .xiaoyuan{
+          //background:url(1.jpg) no-repeat center center;
+          animation:xuanzhuan 3s linear .3s infinite both;
+        @keyframes xuanzhuan {
+          0% {
+            transform:rotate(0deg)
+          }
+          100% {
+            transform:rotate(360deg);
+          }
+        }
         width:133px;
         height:133px;
         border-radius:50%;
@@ -216,10 +248,11 @@ body{
 .music-box{
   width:680px;
   height:60px;
-  background:black;
+  //background:black;
   //background:rgb(45,46,48);
   border-radius:10px;
   margin:0 auto;
+  margin-top:3px;
   z-index:20;
 
   .gece{
@@ -247,8 +280,8 @@ body{
   .shangyishou{
     width:40px;
     height:40px;
-    background:url(img/pic.png);
-    background-position:-70px -26px;
+    background:url(img/player_05.png) no-repeat  center center;
+
     margin:0 5px;
     float:left;
     cursor:pointer;
@@ -257,16 +290,16 @@ body{
   .bofang{
     width:40px;
     height:40px;
-    background:url(img/pic.png);
-    background-position:-105px -44px;
+    background:url(img/player_01.png) no-repeat  center center;
+    //background-position:10px 0;
     margin:0 5px;
     float:left;
     cursor:pointer;
     margin-top:10px;
     /////////////////////////////////////////
     &.zanting{
-      background:url(img/pic.png);
-      background-position:-334px -89px;
+      background:url(img/player_03.png) no-repeat  center center;
+
       margin-top:10px;
 
     }
@@ -275,8 +308,8 @@ body{
   .xiayishou{
     width:40px;
     height:40px;
-    background:url(img/pic.png);
-    background-position:-140px -26px;
+    background:url(img/player_07.png) no-repeat  center center;
+
     margin:0 5px;
     float:left;
     cursor:pointer;
@@ -390,13 +423,13 @@ body{
     margin:0 5px;
     margin-top:10px;
     float:left;
-    background:url(img/pic.png);
-    background-position:-182px -27px;
+    background:url(img/player_02.png) no-repeat;
+    background-position:0 7px;
     cursor:pointer;
 
     &.jingyin{
-      background:url(img/pic.png);
-      background-position:-182px -56px;
+      background:url(img/player_11.png) no-repeat;
+      background-position:0 9px;
       margin-top:10px;
 
     }
